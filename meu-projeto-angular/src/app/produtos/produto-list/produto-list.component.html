@@ -1,0 +1,27 @@
+
+<div class="row lg-12 float-right mt-3 mb-3">
+    <button class="btn btn-success" [routerLink]="['/produtos/produto-form']"> Novo (+) </button>
+</div>
+
+<table class="table">
+    <tr>
+        <th> ID </th>
+        <th> Nome </th>
+        <th> Preço </th>
+        <th> Categoria </th>
+        <th> Ações </th>
+    </tr>
+
+    <tr *ngFor="let p of produtos?.data">
+        <td>  {{ p.id }} </td>
+        <td>  {{ p.name }}  </td>
+        <td>  {{ p.price }}  </td>
+        <td>  {{ getCategories( p.categories ) }}    </td>
+        
+        <td class="btn-group">  
+            <button class="btn btn-info" [routerLink]="['/produtos/produto-form', p.id]"  > Editar </button>
+            <button class="btn btn-danger" (click)="delete( p.id )"  > Deletar </button>
+        </td>
+    
+    </tr>
+</table>

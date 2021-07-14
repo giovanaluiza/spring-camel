@@ -1,0 +1,19 @@
+<form [formGroup]="meuForm" (submit)="onSubmit()" >
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" formControlName="name" class="form-control" id="nome" placeholder="Nome">      
+    </div>
+
+    <div class="form-group">
+      <label for="descricao">Descrição</label>
+      <input type="text" formControlName="description" class="form-control" id="descricao" placeholder="Descrição">
+    </div>
+
+    <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" formControlName="status" class="form-control" id="status" placeholder="Status">
+      </div>
+
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+

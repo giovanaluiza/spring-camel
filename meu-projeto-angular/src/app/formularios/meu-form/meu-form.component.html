@@ -1,0 +1,65 @@
+<form [formGroup]="meuForm">
+    <div class="form-group">
+      <label for="exampleInputEmail1"> Email address</label>
+      <input type="email" class="form-control" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+  <error-field-messages [field]="meuForm.controls.email" nome="email"> </error-field-messages>
+
+<div class="card">
+    <p> Value: {{ meuForm.controls.email.value}} </p>
+    <p> Status : {{ meuForm.controls.email.status   }} </p>
+    <p> Touched : {{ meuForm.controls.email.touched   }} </p>
+    <p> Pristine : {{ meuForm.controls.email.pristine   }} </p>
+    <p> Errors : {{ meuForm.controls.email.errors | json  }} </p>
+</div>
+
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" formControlName="password"   placeholder="Password">
+    </div>
+
+  <error-field-messages [field]="meuForm.controls.password">[nome]=" 'Senha' "</error-field-messages>
+
+  <div class="card">
+    <p> Value : {{ meuForm.controls.password.value   }} </p>
+    <p> Status : {{ meuForm.controls.password.status   }} </p>
+    <p> Touched : {{ meuForm.controls.password.touched   }} </p>
+    <p> Pristine : {{ meuForm.controls.password.pristine   }} </p>
+  </div>
+
+    <div class="form-check">
+      <input type="checkbox" class="form-check-input" formControlName="password">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label>CEP</label>
+        <input type="text" (blur)= "onBuscarCep()" formControlName="cep" class="form-control" placeholder="CEP">
+      </div>
+      <div class="form-group col-md-4">
+        <label >Logradouro</label>
+        <input type="text" formControlName="logradouro" class="form-control" placeholder="Logradouro"readonly>
+      </div>
+      <div class="form-group col-md-4">
+        <label >Bairro</label>
+        <input type="text" formControlName="bairro" class="form-control" placeholder="Bairro"readonly>
+      </div>
+    </div>
+  
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label>Cidade</label>
+        <input type="text"  formControlName="localidade" class="form-control" placeholder="Cidade" readonly>
+      </div>
+  
+      <div class="form-group col-md-6">
+        <label >Estado</label>
+        <input type="text" formControlName="uf" class="form-control" placeholder="Estado"readonly>
+      </div>
+  
+  
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

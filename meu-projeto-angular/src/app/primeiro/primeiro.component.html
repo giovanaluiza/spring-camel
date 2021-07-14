@@ -1,0 +1,18 @@
+<p>primeiro works!</p>
+
+<!-- <app-usuario-list></app-usuario-list> -->
+
+<div class="row" >
+
+    <div class="col-3">
+        <button (click)="alteraString()" 
+            class="btn btn-primary btn-lg tamanho-maior"> 
+            BTN 1</button>
+    </div>
+   
+    <div class="col-8">
+        <button [class]="minhaClasse" *ngIf="minhaClasse == 'btn-success'"> BTN 2</button>
+    </div>
+    
+</div>
+

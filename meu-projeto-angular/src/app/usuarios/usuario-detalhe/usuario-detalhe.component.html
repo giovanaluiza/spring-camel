@@ -1,0 +1,10 @@
+<p>usuario-detalhe works!</p>
+
+<div class="card" *ngIf="usuariosFilho" >
+    <div class="card-body">
+       <p>Nome:<input #nome type="text" [value]="usuariosFilho.nome"></p>
+       <p>Email: <input #email type="text" [value]="usuariosFilho.email"></p>
+      <p><button (click)="onSalvarClick(nome.value,email.value)">Salvar</button></p>
+    </div>
+
+</div>
