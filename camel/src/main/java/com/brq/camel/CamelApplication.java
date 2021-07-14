@@ -8,7 +8,7 @@ public class CamelApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CamelApplication.class, args);
-		
+		int A;
 	}
 
 }
